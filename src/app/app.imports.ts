@@ -8,7 +8,7 @@ import { CameraProvider } from '../providers/util/camera.provider';
 import { NativeGoogleMapsProvider } from '../providers/native-google-maps/native-google-maps';
 
 // Ionic native providers
-import { CardIO } from '@ionic-native/card-io';
+//import { CardIO } from '@ionic-native/card-io';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Camera } from '@ionic-native/camera';
 import { Diagnostic } from '@ionic-native/diagnostic';
@@ -44,7 +44,6 @@ export const PROVIDERS = [
   Camera,
   Diagnostic,
   Geolocation,
-  CardIO,
   StatusBar,
   SplashScreen,
   GoogleMaps,

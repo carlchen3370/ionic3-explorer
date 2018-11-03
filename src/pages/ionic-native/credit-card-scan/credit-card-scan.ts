@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardIO } from '@ionic-native/card-io';
+//import { CardIO } from '@ionic-native/card-io';
 import { NavController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
@@ -9,7 +9,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class CreditCardScanPage {
 
-  constructor(public navCtrl: NavController, public cardIO: CardIO) { }
+  constructor(public navCtrl: NavController) { }
 
   ionViewDidLoad() {
     console.log('Hello CreditCardScan Page');
@@ -28,37 +28,37 @@ export class CreditCardScanPage {
   };
 
   scanCard() {
-    this.cardIO.canScan()
-      .then(
-      (res: boolean) => {
-        if (res) {
-          const options = {
-            scanExpiry: true,
-            hideCardIOLogo: true,
-            scanInstructions: 'Please position your card inside the frame',
-            keepApplicationTheme: true,
-            requireCCV: true,
-            requireExpiry: true,
-            requirePostalCode: false
-          };
-          this.cardIO.scan(options).then(response => {
-            console.log('Scan complete');
+    // this.cardIO.canScan()
+    //   .then(
+    //   (res: boolean) => {
+    //     if (res) {
+    //       const options = {
+    //         scanExpiry: true,
+    //         hideCardIOLogo: true,
+    //         scanInstructions: 'Please position your card inside the frame',
+    //         keepApplicationTheme: true,
+    //         requireCCV: true,
+    //         requireExpiry: true,
+    //         requirePostalCode: false
+    //       };
+    //       this.cardIO.scan(options).then(response => {
+    //         console.log('Scan complete');
 
-            const { cardType, cardNumber, redactedCardNumber,
-                    expiryMonth, expiryYear, cvv, postalCode } = response;
+    //         const { cardType, cardNumber, redactedCardNumber,
+    //                 expiryMonth, expiryYear, cvv, postalCode } = response;
 
-            this.card = {
-              cardType,
-              cardNumber,
-              redactedCardNumber,
-              expiryMonth,
-              expiryYear,
-              cvv,
-              postalCode
-            };
-          });
-        }
-      });
+    //         this.card = {
+    //           cardType,
+    //           cardNumber,
+    //           redactedCardNumber,
+    //           expiryMonth,
+    //           expiryYear,
+    //           cvv,
+    //           postalCode
+    //         };
+    //       });
+    //     }
+    //   });
   }
 
   // Just to animate the fab
