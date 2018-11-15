@@ -1,4 +1,4 @@
-import { ToastService } from '../../providers/util/toast.service';
+import { ToastService } from '../../../providers/util/toast.service';
 import { Component } from '@angular/core';
 import {
     ActionSheetController,

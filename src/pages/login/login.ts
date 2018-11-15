@@ -14,24 +14,24 @@ export class LoginListPage {
     this.rootPage = 'LoginListPage';
     this.items = [
       {
-        title: 'Type one',
+        title: '普通登陆页面',
         page:  'LoginOnePage'
       },
       {
-        title: 'Instagram style',
+        title: 'Instagram 样式',
         page:  'LoginInstagramPage'
       },
       {
-        title: 'Login with slider text',
+        title: '滑动文字',
         page:  'LoginSliderPage'
       },
       {
-        title: 'Login with video background',
-        page:  'LoginBackgroundVideoPage'
-      },
-      {
-        title: 'Login with slider background',
+        title: '背景图片播放',
         page:  'LoginBackgroundSliderPage'
+      },      
+      {
+        title: '带背景视频',
+        page:  'LoginBackgroundVideoPage'
       },
     ];
   }

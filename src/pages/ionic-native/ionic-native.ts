@@ -16,23 +16,23 @@ export class IonicNativePage {
 
     this.items = [
       {
-        title: 'Barcode scan',
+        title: '条码扫描（包括一维和二维码）',
         page: 'BarcodeScannerPage'
       },
+      // {
+      //   title: '信用卡扫描',
+      //   page: 'CreditCardScanPage'
+      // },
       {
-        title: 'Credit card scanning',
-        page: 'CreditCardScanPage'
-      },
-      {
-        title: 'Get image from camera/gallery',
+        title: '从 相机/相册 获取照片',
         page: 'GetImagePage'
       },
+      // {
+      //   title: 'Google Maps',
+      //   page: 'NativeGoogleMapsPage'
+      // },
       {
-        title: 'Google Maps',
-        page: 'NativeGoogleMapsPage'
-      },
-      {
-        title: 'Runtime permissions',
+        title: '运行时权限获取',
         page: 'RuntimePermissionsPage'
       },
     ];

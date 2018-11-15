@@ -16,27 +16,27 @@ export class ProfileListPage {
     this.menu.enable(true, 'menu-profile');
     this.items = [
       {
-        title: 'Type One',
+        title: '样式 1',
         page: 'ProfileOnePage'
       },
       // {
-      //   title: 'Type Two',
-      //   page: ProfileTwoPage
-      // },
+      //    title: 'Type Two',
+      //    page: 'ProfileTwoPage',
+      //  },
       {
-        title: 'Type Three',
+        title: '样式 2',
         page: 'ProfileThreePage'
       },
       {
-        title: 'Type Four',
+        title: '样式 3',
         page: 'ProfileFourPage'
       },
       {
-        title: 'Type Five',
+        title: '样式 4',
         page: 'ProfileFivePage'
       },
       {
-        title: 'Profile Settings',
+        title: '用户信息设置',
         page: 'ProfileSettingsPage'
       },
     ];

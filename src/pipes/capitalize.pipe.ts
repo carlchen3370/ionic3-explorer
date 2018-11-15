@@ -4,6 +4,7 @@ import { Pipe } from '@angular/core';
   name: 'capitalize'
 })
 export class CapitalizePipe {
+    //首字母大写
     // Autocapitalizes the first letter of each word in a phrase.
     // Input: {{'john doe' | capitalize}}
     // Output: John Doe

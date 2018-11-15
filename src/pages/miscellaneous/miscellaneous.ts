@@ -13,56 +13,68 @@ export class MiscellaneousListPage {
   constructor(public navCtrl: NavController, public menu: MenuController) {
     this.items = [
       {
-        title: 'Autosizing Textarea',
+        title: '自适应文本输入',
         page: 'AutosizingTextarea'
       },
       {
-        title: 'Blog Post',
+        title: '手风琴折叠列表',
+        page: 'AccordionListPage'
+      },
+      {
+        title: '博客页面',
         page: 'BlogPostPage'
       },
       {
-        title: 'Charts',
+        title: '浮动按钮 弹出框',
+        page: 'PopupFabPage'
+      },
+      {
+        title: '图表',
         page: 'ChartsPage'
       },
       {
-        title: 'Chat',
+        title: '聊天',
         page: 'ChatsPage'
       },
       {
-        title: 'Concert Card',
+        title: '音乐会卡片',
         page: 'ConcertCardPage'
       },
       {
-        title: 'Countdown',
+        title: '倒计时秒表',
         page: 'CountdownPage'
       },
       {
-        title: 'Expandable Header',
+        title: '可隐藏页面头-手机上ok',
         page: 'ExpandableHeaderPage'
       },
       {
-        title: 'Flash Card',
+        title: '翻转卡片',
         page: 'FlashCardPage'
       },
       {
-        title: 'Pinterest Masonry Cards',
+        title: '堆叠卡片',
         page: 'MasonryCardsPage'
       },
       {
-        title: 'Real Estate Listing',
+        title: '房产信息列表',
         page: 'RealEstateListingPage'
       },
       {
-        title: 'Testimonials',
+        title: '图片感言',
         page: 'TestimonialsPage'
       },
       {
-        title: 'Tinder Cards',
+        title: 'Tinder样式的卡片（赞或不赞选择）',
         page: 'TinderCardsPage'
       },
       {
-        title: 'Item Ribbon',
+        title: '条目勋章（角标）',
         page: 'ItemRibbonPage'
+      },
+      {
+        title: '时间线',
+        page: 'TimelinePage'
       },
     ];
   }

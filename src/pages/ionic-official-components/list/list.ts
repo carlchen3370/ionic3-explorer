@@ -14,27 +14,27 @@ export class ListPage {
     this.rootPage = 'ListsPage';
     this.items = [
       {
-        title: 'Settings',
+        title: '设置列表',
         page : 'SettingsListPage'
       },
       {
-        title: 'Sliding Item',
+        title: '可滑动列表项',
         page : 'SlidingItemPage'
       },
       {
-        title: 'Delete Items',
+        title: '可删除项目',
         page: 'DeleteItemsPage'
       },
+      // {
+      //   title: '有响应的列表标签Reactive List Label',
+      //   page: 'ReactiveListLabelPage'
+      // },
       {
-        title: 'Reactive List Label',
-        page: 'ReactiveListLabelPage'
-      },
-      {
-        title: 'Users Listing',
+        title: '头像列表',
         page: 'UsersPage'
       },
       {
-        title: 'Crypto Currencies',
+        title: '彩色列表',
         page: 'CryptoListPage'
       }
     ];

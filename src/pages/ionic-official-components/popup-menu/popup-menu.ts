@@ -14,11 +14,11 @@ export class PopupMenuListPage {
     this.rootPage = PopupMenuListPage;
     this.items = [
       {
-        title: 'Type One',
+        title: '样式 1',
         page: 'PopupMenuOnePage'
       },
       {
-        title: 'Type Two',
+        title: '样式 2',
         page: 'PopupMenuTwoPage'
       },
     ];

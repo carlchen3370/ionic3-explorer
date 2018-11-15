@@ -1,9 +1,8 @@
 /*===============================================
 
-General Animations
-
+普通 动画效果
 ===============================================*/
-// POP-IN (FLOAT ACTION BUTTON EFFECT) -------------
+// 弹出 (浮动的激活按钮) -------------
 .pop-in {
     animation: pop-in 0.65s;
 }
@@ -22,7 +21,7 @@ General Animations
     }
 }
 
-// POP-OUT (FLOAT ACTION BUTTON EFFECT) -------------
+// 弹出隐藏 (FLOAT ACTION BUTTON EFFECT) -------------
 .pop-out {
     animation: pop-out 2.5s;
 }
@@ -53,7 +52,7 @@ General Animations
     }
 }
 
-// WAVE ----------------------
+// 波动 ----------------------
 .wave {
     top: 1000px;
     animation: wave 0.8s 0.125s cubic-bezier(0.43, 1.6, 0.57, 0.88) forwards !important;
@@ -201,7 +200,7 @@ General Animations
     }
 }
 
-// SHAKE ------------------------
+// 抖动 ------------------------
 .shake {
     animation: shake linear 1s;
     animation-iteration-count: 1;
@@ -243,7 +242,7 @@ General Animations
     }
 }
 
-// BOUNCE ------------------------
+// 弹跳 ------------------------
 .bounce {
     animation: bounce linear 0.8s;
     animation-iteration-count: 1;

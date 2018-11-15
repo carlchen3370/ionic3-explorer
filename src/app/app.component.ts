@@ -42,25 +42,25 @@ export class MyApp {
     ];
 
     this.pages = [
-      { title: 'Home', component: 'HomePage', active: true, icon: 'home' },
-      { title: 'Accordion List', component: 'AccordionListPage', active: false, icon: 'map' },
-      { title: 'Ionic Official Components',
-        component: 'IonicOfficialComponentsPage', active: false, icon: 'ionic' },
-      { title: 'Ionic Native Features', component: 'IonicNativePage', active: false, icon: 'ionic' },
-      { title: 'Login', component: 'LoginListPage', active: false, icon: 'archive' },
-      { title: 'Lists', component: 'ListPage', active: false, icon: 'body' },
-      { title: 'Miscellaneous', component: 'MiscellaneousListPage', active: false, icon: 'bookmarks' },
-      { title: 'Modal with Navigation', component: 'ModalWithNavigationPage', active: false, icon: 'book' },
-      { title: 'Popup Fab', component: 'PopupFabPage', active: false, icon: 'map' },
-      { title: 'Popup Modal', component: 'PopupModalsPage', active: false, icon: 'basket' },
-      { title: 'Popup Menu', component: 'PopupMenuListPage', active: false, icon: 'beer' },
-      { title: 'Profile', component: 'ProfileListPage', active: false, icon: 'camera' },
-      { title: 'Side Menu', component: 'SideMenuPage', active: false, icon: 'bookmark' },
-      { title: 'Timeline', component: 'TimelinePage', active: false, icon: 'calendar' },
-      { title: 'Slides', component: 'SlidesPage', active: false, icon: 'contact' },
-      { title: 'Theming', component: 'ThemingPage', active: false, icon: 'power' },
+      //{ title: '介绍', component: 'HomePage', active: true, icon: 'home' },
+      { title: '登陆页面', component: 'LoginListPage', active: false, icon: 'archive' },      
+      { title: '用户信息页面', component: 'ProfileListPage', active: false, icon: 'camera' },
+      { title: '官方经典组件', component: 'IonicOfficialComponentsPage', active: false, icon: 'ionic' },
+      { title: '各种其他组件', component: 'MiscellaneousListPage', active: false, icon: 'bookmarks' },      
+      //{ title: '各种列表', component: 'ListPage', active: false, icon: 'body' },
+      { title: 'Native app 特性', component: 'IonicNativePage', active: false, icon: 'ionic' },
+      { title: '我的测试页', component: 'MytestPage', active: false, icon: 'musical-notes' },
+      //{ title: '弹出的模态框', component: 'PopupModalsPage', active: false, icon: 'basket' },
+      //{ title: '带导航的模态框', component: 'ModalWithNavigationPage', active: false, icon: 'book' },
+      
+      //{ title: '侧边菜单', component: 'SideMenuPage', active: false, icon: 'bookmark' },
+      //{ title: '弹出菜单', component: 'PopupMenuListPage', active: false, icon: 'beer' }, 
+      //{ title: '时间线', component: 'TimelinePage', active: false, icon: 'calendar' },
+      //{ title: '各种滑动幻灯片', component: 'SlidesPage', active: false, icon: 'contact' },
+      //{ title: '主题变更', component: 'ThemingPage', active: false, icon: 'power' },
     ];
 
+    //设置菜单的选中项目
     this.activePage.subscribe((selectedPage: any) => {
       this.pages.map(page => {
         page.active = page.title === selectedPage.title;
@@ -76,6 +76,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashscreen.hide();
       this.menuCtrl.enable(false, 'right');
+      this.menuCtrl.enable(true, 'menu-material');
     });
   }
 
