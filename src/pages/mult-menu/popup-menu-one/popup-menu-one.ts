@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { Location} from '@angular/common'
+import { NavController, IonicPage, Platform } from 'ionic-angular';
+import * as queryString from 'query-string';
 
 @IonicPage()
 @Component({
@@ -8,8 +10,17 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class PopupMenuOnePage {
   openMenu = false;
+  platf: string = "";
+  urlQuery: string = "";
+  constructor(public navCtrl: NavController, 
+    public platform: Platform,
+    public location: Location
+    ) {
 
-  constructor(public navCtrl: NavController) { }
+    this.platf = JSON.stringify( platform.platforms());
+    this.urlQuery = JSON.stringify( queryString.parseUrl(location.path()).query);
+
+   }
 
   togglePopupMenu() {
     return this.openMenu = !this.openMenu;

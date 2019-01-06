@@ -15,6 +15,11 @@ export class IonicOfficialComponentsPage {
     this.rootPage = 'CardListPage';
 
     this.items = [
+      
+      {
+        title: '各种输入框',
+        page: 'InputsPage'
+      },
       {
         title: '各种按钮',
         page: 'ButtonsListPage'
@@ -36,20 +41,8 @@ export class IonicOfficialComponentsPage {
         page: 'SlidesPage'
       },
       {
-        title: '弹出的模态框',
+        title: '模态框',
         page: 'PopupModalsPage'
-      },
-      {
-        title: '带导航的模态框',
-        page: 'ModalWithNavigationPage'
-      },
-      {
-        title: '侧边菜单',
-        page: 'SideMenuPage'
-      },
-      {
-        title: '浮动弹出菜单',
-        page: 'PopupMenuListPage'
       },
       
     ];

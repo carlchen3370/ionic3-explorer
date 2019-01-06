@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 /**
  * Generated class for the MytestPage page.
@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MytestPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  platf: string;
+  constructor(
+    public platform: Platform
+    ) {
+      this.platf = JSON.stringify(this.platform.platforms());
   }
 
   ionViewDidLoad() {

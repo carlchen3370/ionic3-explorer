@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.braga.advancedionic2components.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Advanced Ionic2 Components</name>
-    <description>An awesome Ionic/Cordova app.</description>
+<widget id="exampleapp.gzb.com" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ionic 示例</name>
+    <description>一个 ionic3 各种组件的例子.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -68,4 +68,5 @@
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="phonegap-plugin-barcodescanner" spec="^6.0.8" />
     <engine name="android" spec="^6.1.2" />
+    <engine name="browser" spec="5.0.4" />
 </widget>

@@ -1,6 +1,6 @@
 import { AppState } from './app.global';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, MenuController } from 'ionic-angular';
+import { Nav, Platform, MenuController, NavController, ToastController, App } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Subject } from 'rxjs/Subject';
@@ -25,7 +25,9 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashscreen: SplashScreen,
     public global: AppState,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    public toastCtrl: ToastController,
+    public app: App
   ) {
     this.initializeApp();
     this.rightMenuItems = [
@@ -42,24 +44,15 @@ export class MyApp {
     ];
 
     this.pages = [
-      //{ title: '介绍', component: 'HomePage', active: true, icon: 'home' },
-      { title: '登陆页面', component: 'LoginListPage', active: false, icon: 'archive' },      
-      { title: '用户信息页面', component: 'ProfileListPage', active: false, icon: 'camera' },
+      { title: '平台测试', component: 'MytestPage', active: false, icon: 'information-circle' },
       { title: '官方经典组件', component: 'IonicOfficialComponentsPage', active: false, icon: 'ionic' },
-      { title: '各种其他组件', component: 'MiscellaneousListPage', active: false, icon: 'bookmarks' },      
-      //{ title: '各种列表', component: 'ListPage', active: false, icon: 'body' },
-      { title: 'Native app 特性', component: 'IonicNativePage', active: false, icon: 'ionic' },
-      { title: '我的测试页', component: 'MytestPage', active: false, icon: 'musical-notes' },
-      //{ title: '弹出的模态框', component: 'PopupModalsPage', active: false, icon: 'basket' },
-      //{ title: '带导航的模态框', component: 'ModalWithNavigationPage', active: false, icon: 'book' },
-      
-      //{ title: '侧边菜单', component: 'SideMenuPage', active: false, icon: 'bookmark' },
-      //{ title: '弹出菜单', component: 'PopupMenuListPage', active: false, icon: 'beer' }, 
-      //{ title: '时间线', component: 'TimelinePage', active: false, icon: 'calendar' },
-      //{ title: '各种滑动幻灯片', component: 'SlidesPage', active: false, icon: 'contact' },
-      //{ title: '主题变更', component: 'ThemingPage', active: false, icon: 'power' },
-    ];
+      { title: '高级组件', component: 'MiscellaneousListPage', active: false, icon: 'bookmarks' },      
+      { title: '菜单', component: 'MultMenuPage', active: false, icon: 'menu' },
+      { title: '登陆页面', component: 'LoginListPage', active: false, icon: 'log-in' },      
+      { title: '用户信息页面', component: 'ProfileListPage', active: false, icon: 'contact' },      
+      { title: 'Native app 特性', component: 'IonicNativePage', active: false, icon: 'camera' },
 
+    ];
     //设置菜单的选中项目
     this.activePage.subscribe((selectedPage: any) => {
       this.pages.map(page => {
@@ -74,10 +67,44 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#333333');//设置状态栏的北京为灰色
+      this.statusBar.styleLightContent();//设置状态栏的文字内容为浅色
       this.splashscreen.hide();
       this.menuCtrl.enable(false, 'right');
       this.menuCtrl.enable(true, 'menu-material');
+
+      //注册 android 平台的硬件返回按钮事件
+      this.platform.registerBackButtonAction(() => {
+        //获取NavController
+        let activeNav: NavController = this.app.getActiveNavs()[0];
+        //如果可以返回上一页，则执行pop
+        if (activeNav.canGoBack()) {
+          activeNav.pop();
+        } else {
+          this.showExitToast();
+        }
+      });      
     });
+  }
+
+  backButtonPressed: boolean = false;
+  //退出应用方法
+  private showExitToast(): void {
+    //如果为true，退出
+    if (this.backButtonPressed) {
+      this.platform.exitApp();
+    } else {
+        //第一次按，弹出Toast
+        this.toastCtrl.create({
+            message: '再按一次退出应用',
+            duration: 800,
+            position: 'buttom'
+        }).present();
+      //标记为true
+      this.backButtonPressed = true;
+      //两秒后标记为false，如果退出的话，就不会执行了
+      setTimeout(() => this.backButtonPressed = false, 800);
+    }
   }
 
   openPage(page) {

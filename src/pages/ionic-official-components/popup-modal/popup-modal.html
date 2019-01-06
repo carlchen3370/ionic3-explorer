@@ -3,13 +3,14 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Popup Modal</ion-title>
+        <ion-title>弹出的模态框</ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content>
     <div padding>
-        <button ion-button block (click)="openHintModal()">Hint Modal</button>
-        <button ion-button color="danger" block (click)="openSignupModal()">Signup with slider</button>
-        <button ion-button color="secondary" block (click)="openWalkthroughModal()">Walkthrough modal</button>
+        <button ion-button block (click)="openHintModal()">提示 模态</button>
+        <button ion-button color="danger" block (click)="openSignupModal()">登陆 模态框</button>
+        <button ion-button color="secondary" block (click)="openWalkthroughModal()">预排版 模态框</button>
+        <button ion-button  block (click)="modalWithNav()">有导航的模态框</button>
     </div>
 </ion-content>

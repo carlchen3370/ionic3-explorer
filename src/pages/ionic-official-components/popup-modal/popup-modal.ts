@@ -26,9 +26,11 @@ export class PopupModalsPage {
   openSignupModal() {
     this.openModal('SignupModalPage');
   }
+  modalWithNav(){
+    this.navCtrl.push("ModalWithNavigationPage");
+  }
 
   openModal(pageName) {
-    this.modalCtrl.create(pageName, null, { cssClass: 'inset-modal' })
-                  .present();
+    this.modalCtrl.create(pageName, null, { cssClass: 'inset-modal' }).present();
   }
 }

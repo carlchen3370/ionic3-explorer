@@ -5,6 +5,8 @@
 </ion-header>
 
 <ion-content padding>
+	<p>platform.platforms()：{{platf}}</p>
+	<p>Url Query: {{urlQuery}}</p>
 	<div class="popup-menu">
 		<div class="popup-menu-overlay" [ngClass]="{'in': openMenu}" (click)="togglePopupMenu()"></div>
 		<div class="popup-menu-toggle" (click)="togglePopupMenu()" [ngClass]="{'out': openMenu}"></div>

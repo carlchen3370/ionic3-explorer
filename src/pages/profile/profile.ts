@@ -16,27 +16,23 @@ export class ProfileListPage {
     this.menu.enable(true, 'menu-profile');
     this.items = [
       {
-        title: '样式 1',
+        title: '每日消息',
         page: 'ProfileOnePage'
       },
-      // {
-      //    title: 'Type Two',
-      //    page: 'ProfileTwoPage',
-      //  },
       {
-        title: '样式 2',
+        title: '朋友圈1',
         page: 'ProfileThreePage'
       },
       {
-        title: '样式 3',
+        title: '朋友圈2',
         page: 'ProfileFourPage'
       },
       {
-        title: '样式 4',
+        title: '联系方式展示',
         page: 'ProfileFivePage'
       },
       {
-        title: '用户信息设置',
+        title: '用户设置',
         page: 'ProfileSettingsPage'
       },
     ];
